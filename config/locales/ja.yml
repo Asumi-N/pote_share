@@ -8,5 +8,9 @@
          email: メールアドレス
          age: 年齢
          introduction: 一言紹介
+       room:
+         name: ルーム名
+         price: 料金
+         address: 住所
   
          

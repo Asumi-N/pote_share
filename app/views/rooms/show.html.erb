@@ -24,9 +24,11 @@
    ¥<%= @room.price %>/日
   </h5>
   <div class="room-show-date-select">
-   <%= form_with model: @reservation do |f| %>
-   <%= f.hidden_field :room_id, value: @room.id %>
-   <%= f.hidden_field :user_id, value: current_user.id %>
+   <%= form_with model: @reservation, method: :get, url: new_reservation_path do |f| %>
+    <% if user_signed_in? %>
+     <%= f.hidden_field :room_id, value: @room.id %>
+     <%= f.hidden_field :user_id, value: current_user.id %>
+    <% end %>
 
    <%= f.label :start,"開始日" %><br>
    <%= f.date_field :start %><br>
@@ -40,7 +42,7 @@
    <% if user_signed_in? %>
     <%= f.submit"予約する"%>
    <% else %>
-    <%= link_to "ログイン","new_user_session_path"%>
+    <button class="room-show-login"><%= link_to "ログイン","new_user_session_path"%></button>
    <% end %>
 
    <% end %>

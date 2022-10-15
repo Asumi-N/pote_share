@@ -2,6 +2,9 @@ class RoomsController < ApplicationController
   
   def new
     @room=Room.new
+    if @room.valid?
+      flash[:notice]="必須項目を入力してください"
+    end
   end
 
   def create

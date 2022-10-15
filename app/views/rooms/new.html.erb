@@ -1,6 +1,8 @@
 <div class="room-register">
  <div class="room-register-box">
   <h2>ルーム情報登録</h2>
+
+  <%= render"shared/error",obj:@room %>
  
   <%= form_with model: @room do |f| %>
    <table class="update-content">
@@ -33,6 +35,7 @@
    <div class ="submit-form">
     <h3><%= f.submit "登録" %></h3>
    </div>
+   <%= hidden_field :user_id, value: current_user.id %>
   <% end %>
  </div>
  </div>

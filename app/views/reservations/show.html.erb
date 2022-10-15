@@ -1,0 +1,23 @@
+<div class="reservation-complete">
+ <div class="complete-title">
+  <h1>予約が完了しました</h1>
+ </div>
+ 
+ <table class="complete-detail">
+  <tr>
+   <td>予約した部屋</td>
+   <td><%= @room.name %></td>
+  </tr>
+  <tr>
+   <td>開始日</td>
+   <td><%= @reservation.start %></td>
+  </tr>
+  <tr>
+   <td>終了日</td>
+   <td><%= @reservation.end %></td> 
+  </tr>
+  <tr>
+   <td>価格</td>
+   <td><%= @price %>
+  </tr>
+ </table>

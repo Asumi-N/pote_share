@@ -1,0 +1,53 @@
+<div class="reservation-new">
+ <table class="reservation-new-detail">
+  <tr>
+   <th colspan="2" class="title">予約内容確認</th>
+  </tr>
+  <tr>
+   <th colspan="2" class="price">¥<%= @room.price %>/日</th>
+  </tr>
+  <tr>
+   <td width="40%">開始日</td>
+   <td width="60%"><%= @reservation.start %></td>
+  </tr>
+  <tr>
+   <td>終了日</td>
+   <td><%= @reservation.end %></td>
+  </tr>
+  <tr>
+   <td>泊数</td>
+   <td><%= @days %>泊</td>
+  </tr>
+  <tr>
+   <td>人数</td>
+   <td><%= @reservation.number %>名</td>
+  </tr>
+  <tr>
+   <td>合計金額</td>
+   <td><%= @price %>円</td>
+  </tr>
+  <tr>
+   <td colspan="2" class="notice">上記内容でよろしければ「予約を確定」を押してください</td>
+  </tr>
+  </table>
+
+   <%= form_with model: @reservation do |f|%>
+    <%= f.hidden_field :room_id, value: @room.id%>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :start %>
+    <%= f.hidden_field :end %>
+    <%= f.hidden_field :number %>
+    <div class="reservation-submit">
+     <%=f.submit "予約を確定" %>
+    </div>
+    
+   <% end %>
+   
+   <div class="reservation-button">
+    <%= link_to ("/rooms/#{@room.id}")do %>
+     <button class="reservation-back">ルーム詳細に戻る</button>
+    <% end %>
+   </div>
+   
+  
+</div>
