@@ -15,8 +15,12 @@
  */
  body{
     margin: 0;
-    padding: 0;
-    width: auto;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+ }
+ main{
+    flex: 1;
  }
 .header{
     width: 100%;
@@ -60,4 +64,30 @@
     color: white;
     text-decoration: none;
     font-size: 15px;
+}
+.user-listings{
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+.user-listings-channel ul{
+    padding-top: 30px;
+    list-style: none;
+}
+.user-listings-channel li{
+    padding-bottom: 16px;
+}
+.user-listings-channel a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.user-listings-channel a:hover{
+    color: #4a90e2;
+}
+.footer{
+    height: 60px;
+    color: white;
+    background-color: black;
+    text-align: center;
 }

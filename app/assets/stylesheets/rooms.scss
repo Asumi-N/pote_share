@@ -4,6 +4,7 @@
 .room-register{
     padding-top: 36px;
     font-size: 16px;
+    padding-bottom: 36px;
 }
 .room-register-box{
     max-width: 840px;
@@ -125,4 +126,25 @@
     color: white;
     text-decoration: none; 
     font-size: 18px;
+}
+.reservation-room-list{
+    padding: 24px 50px;
+}
+.reservation-room-detail{
+    border-collapse: collapse;
+}   
+.reservation-room-detail tr{
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+.reservation-room-detail th,td{
+    padding: 10px 20px;
+    background-color: white;
+}
+.reservation-room-detail tr:nth-child(odd) td{
+    background-color: #f5f5f5;
+}
+.reservation-room-detail img{
+    width: 240px;
+    height: 140px;
 }

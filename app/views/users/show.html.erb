@@ -1,0 +1,32 @@
+<div class="user-account-container">
+  <div class="user-account-sidebar">
+   <%= render 'shared/sidebar'%>
+  </div>
+
+  <div class="user-account-main">
+   <table class="user-account-detail">
+    <tr>
+     <td colspan="2" class="title">アカウント</td>
+    </tr>
+    <tr>
+     <td width="30%">メールアドレス</td>
+     <td width="70%"><%= @user.email %></td>
+    </tr>
+    <tr>
+     <td>パスワード</td>
+     <td>非表示</td>
+    </tr>
+   
+   <tr>
+    <td class="user-edit-buttons"><%= link_to("/users/edit") do %>
+     <button class="user-edit-button">編集</button>
+    <% end %>
+    </td>
+   </tr>
+   
+
+   </table>
+
+  
+ </div>
+</div>

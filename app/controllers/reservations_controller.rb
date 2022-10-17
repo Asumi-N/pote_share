@@ -1,17 +1,18 @@
 class ReservationsController < ApplicationController
  
  def index
+    @reservations=Reservation.where(user_id: current_user.id)
  end
 
  def new
     @room=Room.find(params[:reservation][:room_id])
     @reservation=Reservation.new(reservation_params)
 
-    if @reservation.start == nil || @reservation.end == nil || @reservation.number == nil
-      redirect_to room_path(@reservation.room_id)
-      flash[:notice]="必須項目を入力してください"
-    else
-      @price=@room.price*(@reservation.end-@reservation.start).to_i
+    if @reservation.start == nil||@reservation.end == nil||@reservation.number == nil
+      redirect_to room_path(@reservation.room_id) 
+      flash[:notice]="必須項目を入力してください" and return
+    else 
+      @price=@room.price*@reservation.number*(@reservation.end-@reservation.start).to_i
       @days=(@reservation.end-@reservation.start).to_i
     end
 

@@ -2,7 +2,7 @@
  <div class="room-register-box">
   <h2>ルーム情報登録</h2>
 
-  <%= render"shared/error",obj:@room %>
+  <%= render "shared/error", obj: @room %>
  
   <%= form_with model: @room do |f| %>
    <table class="update-content">
@@ -28,14 +28,14 @@
    
     <tr>
      <th><%= f.label :room_image,"ルーム画像" %></th>
-     <td><%= f.file_field :room_image %></td>
+     <td><%= f.file_field :image %></td>
     </tr>
    </table>
 
    <div class ="submit-form">
     <h3><%= f.submit "登録" %></h3>
    </div>
-   <%= hidden_field :user_id, value: current_user.id %>
+   <%= f.hidden_field :user_id, value: current_user.id %>
   <% end %>
  </div>
  </div>

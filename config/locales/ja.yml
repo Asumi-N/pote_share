@@ -12,5 +12,8 @@
          name: ルーム名
          price: 料金
          address: 住所
-  
+         image: ルーム画像
+   time:
+     formats:
+       default: "%Y/%m/%d %H:%M:%S"
          

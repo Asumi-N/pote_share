@@ -2,13 +2,10 @@ class RoomsController < ApplicationController
   
   def new
     @room=Room.new
-    if @room.valid?
-      flash[:notice]="必須項目を入力してください"
-    end
   end
 
   def create
-    @room = Room.new(params.require(:room).permit(:name, :introduce, :price, :address, :room_image))
+    @room = Room.new(params.require(:room).permit(:name, :introduce, :price, :address, :image, :user_id))
     if @room.save
       redirect_to("/rooms/#{@room.id}")
     else
@@ -28,5 +25,9 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def posts
+    @rooms=Room.where(user_id: current_user.id)
   end
 end
