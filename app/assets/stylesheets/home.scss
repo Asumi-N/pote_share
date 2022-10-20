@@ -1,0 +1,41 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.top-main{
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}
+.form-frame{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-left: 100px;
+}
+.form-area{
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+.form-area p{
+    font-size: 28px;
+}
+.form-area .search-word{
+    font-size: 14px;
+}   
+.form-area input{
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ced4da;
+}
+.search-submit input{
+    background-color: #4a90e2 !important;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}

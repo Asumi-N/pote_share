@@ -1,0 +1,24 @@
+<div class="reservation-room-list">
+ <h2>登録済みルーム一覧</h2>
+ 
+ <table class="reservation-room-detail">
+  <tr>
+   <th>ルーム画像</th>
+   <th>ルーム名</th>
+   <th>ルーム紹介</th>
+   <th>料金</th>
+   <th>作成日</th>
+  </tr>
+  
+  <% @rooms.each do |room| %>
+  <tr>
+   <td><%= image_tag room.image %></td>
+   <td><%= link_to room.name, controller:'rooms',action:'show',id:room.id %></td>
+   <td><%= room.introduce %></td>
+   <td><%= room.price %></td>
+   <td><%= l room.created_at %></td>
+  </tr>
+  <% end %>
+   
+  </table>
+</div>

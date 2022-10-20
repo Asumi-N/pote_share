@@ -1,0 +1,30 @@
+<div class="container-login">
+ <div class="login-frame">
+
+  <h2>ログイン</h2>
+
+   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <table class="login-inner">
+     
+     <tr>
+      <th><%= f.label :email %><br /></th>
+      <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+     </tr>
+ 
+     <tr>
+      <th><%= f.label :password,"パスワード"%><br /></th>
+      <td><%= f.password_field :password, autocomplete: "current-password" %><td>
+     </tr>
+    </table>
+  
+    <div class="actions">
+     <%= f.submit "ログイン" %>
+    </div>
+
+    <div class="login-signup">
+     <%= link_to "新しいアカウントを作成",new_user_registration_path,class:"login-link"%>
+   <% end %>
+
+  
+ </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container-device">
+ <div class="device-frame">
+  <h2>新しいアカウントを作成</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+   <%= render "devise/shared/error_messages", resource: resource %>
+    <table class="device-inner">
+  
+     <tr>
+      <th><%= f.label :name %><br /></th>
+      <td><%= f.text_field :name, autofocus: true, autocomplete: "name" %></td>
+     </tr>
+  
+     <tr>
+      <th><%= f.label :email %><br /></th>
+      <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+     </tr>
+
+     <tr>
+      <th><%= f.label :password,"パスワード"%><br>
+        <% if @minimum_password_length %>
+        (<%= @minimum_password_length %> 文字以上)
+        <% end %><br /></th>
+      <td><%= f.password_field :password, autocomplete: "new-password" %></td>
+     </tr>
+  
+     <tr>
+      <th><%= f.label :password_confirmation,"パスワード確認"%><br /></th>
+      <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
+     </tr>
+  
+    </table>
+
+    <div class="actions">
+     <%= f.submit "新しいアカウントを作成" %>
+    </div>
+  <% end %>
+  
+  <div class="devise-login">
+   <%=link_to "すでにアカウントをお持ちの方はログイン","/users/sign_in",class:"device-link"%>
+  </div> 
+ </div>
+</div>

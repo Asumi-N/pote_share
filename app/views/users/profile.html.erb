@@ -1,0 +1,42 @@
+<div class="user-profile-container">
+ <div class="user-account-sidebar">
+  <%= render 'shared/sidebar'%>
+ </div>
+ 
+ <div class="user-profile-main">
+  <table class="user-profile-detail">
+   <tr>  
+   <td colspan="2"><h2>プロフィール</h2></td>
+   </tr>
+
+   <tr>
+    <td colspan="2">
+    <% if @user.image.present? %>
+     <%= image_tag @user.image %>
+    <% else %>
+     <%= image_tag ('https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon.jpg')%>
+    <% end %></td>
+   </tr>
+
+   <%= form_with model: @user do |f| %>
+   <tr>
+    <td><%= f.label :image,"アイコン画像"%></td>
+    <td><%= f.file_field :image,class:'user-profile-icon'%></td>
+   </tr>
+   <tr>
+    <td><%= f.label :name,"名前" %></td>
+    <td><%= f.text_field :name,value:@user.name %></td>
+   </tr>
+   <tr>
+    <td><%= f.label :introduce,"自己紹介" %></td>
+    <td><%= f.text_area :introduce, value:@user.introduce %></td>
+   </tr>
+
+  <tr>
+   <td class="user-profile-button"><%= f.submit"更新" %></td>
+  </tr>
+ </table>
+ <% end %>
+  
+
+</div>

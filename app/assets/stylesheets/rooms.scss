@@ -1,0 +1,192 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.room-register{
+    padding-top: 36px;
+    font-size: 16px;
+    padding-bottom: 36px;
+}
+.room-register-box{
+    max-width: 840px;
+    padding: 24px;
+    margin: 0px auto;
+    border: solid 1px #87cefa;
+}
+.room-register-box h2{
+    text-align: center;
+}
+.update-content input{
+    width: 600px;
+    margin-left: 50px;
+}
+.update-content textarea{
+    width: 610px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.submit-form {
+    text-align: center;
+}
+.submit-form input{
+    width: 500px;
+    background-color: #ffb833;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-room{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.room-show-about{
+    width: 55%;
+    margin: 0px 20px;
+}
+.room-show-nav{
+    width: 30%;
+}
+.room-show-about-image img{
+    width: 100%;
+    object-fit: cover;
+}
+.room-show-detail{
+    display:flex;
+    align-items: center;
+}
+.room-show-detail-icon{
+    padding:10px;
+}
+.host-icon{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.room-show-nav h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+.room-show-name{
+    font-size: 18px;
+    font-weight: bold;
+}
+.room-show-introduce{
+    font-size: 16px;
+    padding: 20px 10px;
+    line-height: 30px;
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+.room-show-nav{
+    padding: 20px;
+    border: 1px solid #eaedef;
+    margin: 0 auto;
+}
+.room-show-date-select{
+    width: 100%;
+    margin: 0 auto;
+}
+.room-show-date-select label{
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.room-show-date-select input{
+    width: 90%;
+    text-align: left;
+    margin-bottom: 18px;
+}
+.room-show-date-submit {
+    text-align: center;
+}
+.room-show-date-submit input{
+    width: 95%;
+    background-color: #ffb833;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+}
+.room-show-login{
+    width: 95%;
+    height: 40px;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+}
+.room-show-login a{
+    color: white;
+    text-decoration: none; 
+    font-size: 18px;
+}
+.reservation-room-list{
+    padding: 24px 50px;
+}
+.reservation-room-detail{
+    border-collapse: collapse;
+}   
+.reservation-room-detail tr{
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+.reservation-room-detail th,td{
+    padding: 10px 20px;
+    background-color: white;
+}
+.reservation-room-detail tr:nth-child(odd) td{
+    background-color: #f5f5f5;
+}
+.reservation-room-detail img{
+    width: 240px;
+    height: 140px;
+}
+.room-search-result{
+    padding: 36px;
+}
+.room-search-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.room-search-detail{
+    max-width:33%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid  #eaedef;
+}
+.room-search-detail a{
+    text-decoration: none;
+}
+.room-search-image{
+    padding-top: 8px;
+}
+.room-search-image img{
+    width: 100%;
+    height: 180px;
+}
+.room-search-content{
+    padding:  0 12px;
+}
+.search-room-name {
+    margin: 4px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #909090;
+}
+.search-room-address{
+    margin: 8px 0;
+    color: black;
+    font-weight: 600;
+}
+.search-room-price{
+    float: right;
+    color: black;
+
+}

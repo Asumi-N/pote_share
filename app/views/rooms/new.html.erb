@@ -1,0 +1,41 @@
+<div class="room-register">
+ <div class="room-register-box">
+  <h2>ルーム情報登録</h2>
+
+  <%= render "shared/error", obj: @room %>
+ 
+  <%= form_with model: @room do |f| %>
+   <table class="update-content">
+    <tr>
+     <th><%= f.label :name,"ルーム名" %></th>
+     <td><%= f.text_field :name %></td>
+    </tr>
+    
+    <tr>
+     <th><%= f.label :introduce,"ルーム紹介" %></th>
+     <td><%= f.text_area :introduce %></td>
+    </tr>
+   
+    <tr>
+     <th><%= f.label :price,"料金" %></th>
+     <td><%= f.number_field :price %></td>
+    </tr>
+   
+    <tr>
+     <th><%= f.label :address,"住所" %></th>
+     <td><%= f.text_field :address %></td>
+    </tr>
+   
+    <tr>
+     <th><%= f.label :room_image,"ルーム画像" %></th>
+     <td><%= f.file_field :image %></td>
+    </tr>
+   </table>
+
+   <div class ="submit-form">
+    <h3><%= f.submit "登録" %></h3>
+   </div>
+   <%= f.hidden_field :user_id, value: current_user.id %>
+  <% end %>
+ </div>
+ </div>

@@ -1,0 +1,90 @@
+.container-device{
+    padding-top: 36px;
+    font-size: 16px;
+}
+.device-frame{
+    max-width: 800px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    border: solid 1px #87cefa;
+}
+.device-inner{
+    width: 700px;
+    margin: 0px auto;
+}
+td{
+    line-height: 30px;
+    font-size: 16px;
+}
+input{
+    font-size: 18px;
+    padding: 6px;
+    margin-top: 10px;
+    text-align: center;
+    width: 90%;
+}
+label{
+    font-weight: 400;
+}
+label em{
+    font-weight: 400;
+}
+.actions input{
+    width: 400px;
+    font-size: 18px;
+    padding: 8px;
+    margin-top: 18px;
+    background-color: #ffb833;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.devise-login{
+    margin-top: 10px;
+}
+.device-link{
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.devise-back button{
+    width: 400px;
+    font-size: 18px;
+    padding: 8px;
+    margin-top: 18px;
+    color: #1e90ff;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.container-login{
+    padding-top: 36px;
+    font-size: 16px;
+}
+.login-frame{
+    max-width: 800px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    border: solid 1px #87cefa;
+}
+.login-inner{
+    width: 700px;
+    margin: 0px auto;
+}
+.login-frame a{
+    text-decoration: none;
+}
+.login-link{
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.login-signup{
+    margin-top: 10px;
+}
+
+
