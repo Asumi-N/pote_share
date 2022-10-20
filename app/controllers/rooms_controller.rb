@@ -1,5 +1,9 @@
 class RoomsController < ApplicationController
   
+  def index
+    @users=User.all
+  end
+  
   def new
     @room=Room.new
   end
@@ -30,4 +34,11 @@ class RoomsController < ApplicationController
   def posts
     @rooms=Room.where(user_id: current_user.id)
   end
+
+  def search
+    @q = Room.ransack(params[:q])
+    @results = @q.result(distinct: true)
+  end
+
+  
 end

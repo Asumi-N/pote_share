@@ -30,13 +30,11 @@
 .header-left-nav{
     float: left;
 }
-
-
 .header-right-nav{
     float: right;
     color: white;
     display: block;
-    padding-right: 10px;
+    padding: 10px 20px;
 }
 .header-nav-menu{
     background-color: white;

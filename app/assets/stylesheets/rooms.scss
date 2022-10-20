@@ -148,3 +148,45 @@
     width: 240px;
     height: 140px;
 }
+.room-search-result{
+    padding: 36px;
+}
+.room-search-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.room-search-detail{
+    max-width:33%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid  #eaedef;
+}
+.room-search-detail a{
+    text-decoration: none;
+}
+.room-search-image{
+    padding-top: 8px;
+}
+.room-search-image img{
+    width: 100%;
+    height: 180px;
+}
+.room-search-content{
+    padding:  0 12px;
+}
+.search-room-name {
+    margin: 4px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #909090;
+}
+.search-room-address{
+    margin: 8px 0;
+    color: black;
+    font-weight: 600;
+}
+.search-room-price{
+    float: right;
+    color: black;
+
+}
